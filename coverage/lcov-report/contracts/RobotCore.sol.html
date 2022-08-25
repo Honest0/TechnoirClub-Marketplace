@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/RobotCore.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> RobotCore.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>62/62</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.86% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>26/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>61/61</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">414×</span>
+<span class="cline-any cline-yes">414×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">46×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">153×</span>
+<span class="cline-any cline-yes">153×</span>
+<span class="cline-any cline-yes">153×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155×</span>
+<span class="cline-any cline-yes">155×</span>
+<span class="cline-any cline-yes">155×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">308×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1046×</span>
+<span class="cline-any cline-yes">1045×</span>
+<span class="cline-any cline-yes">1045×</span>
+<span class="cline-any cline-yes">1045×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity 0.8.15;
+&nbsp;
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "./RobotMarketPlace.sol";
+&nbsp;
+/**
+ * @title RobotCore contract.
+ * NOTE: The contract includes the main functions for minting and modifying robots.
+ * @dev Contract inherit from RobotMarketPlace and RobotFactory contracts.
+ */
+contract RobotCore is Ownable, RobotMarketPlace {
+    uint256 private _gen0Counter;
+    uint256 public immutable CREATION_LIMIT_GEN0;
+&nbsp;
+    /**
+     * @dev Set immutable amount of generation 0 robots available for minting.
+     * @param _gen0Limit Limit of generation 0 robots that the owner of the contract can create.
+     */
+    constructor(uint256 _gen0Limit) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_gen0Limit &gt; 1, "Minimum 2 gen0 required");
+        CREATION_LIMIT_GEN0 = _gen0Limit;
+    }
+&nbsp;
+    /**
+     * @dev Function to create a new robot from the IDs of two available robots for a specific address.
+     * The ID of the new robot is calculated randomly using parts from the first and second parent IDs.
+     * To calculate the generation and ID of a new robot, _newRobotId() and _newRobotGeneration() are called, respectively.
+     * At the end it calls _createRobot() from RobotFactory contract.
+     *
+     * Requirements:
+     *
+     * - The owner of `_firstRobotParentId` and `_secondRobotParentId` must be the initiator of the function.
+     * - `_firstRobotParentId` and `_secondRobotParentId` must be different IDs.
+     *
+     * @param _firstRobotParentId Id of first robot that will be the first 'parent'.
+     * @param _secondRobotParentId Id of second robot that will be the second 'parent'.
+     *
+     * Emits a {Build} event.
+     */
+    function modifying(uint64 _firstRobotParentId, uint64 _secondRobotParentId) public {
+        require(ownerOf(_firstRobotParentId) == msg.sender, "One or both of the tokens do not belong to caller");
+        require(ownerOf(_secondRobotParentId) == msg.sender, "One or both of the tokens do not belong to caller");
+        require(_firstRobotParentId != _secondRobotParentId, "The robot can't modify himself alone");
+        (uint64 firstRobotParentId, , , , uint32 firstRobotParentGeneration, ) = getRobot(_firstRobotParentId);
+        (uint64 secondRobotParentId, , , , uint32 secondRobotParentGeneration, ) = getRobot(_secondRobotParentId);
+        uint256 newRobotId = _newRobotId(firstRobotParentId, secondRobotParentId);
+        uint32 newRobotGeneration = _newRobotGeneration(firstRobotParentGeneration, secondRobotParentGeneration);
+        _createRobot(uint64(newRobotId), _firstRobotParentId, _secondRobotParentId, newRobotGeneration, msg.sender);
+    }
+&nbsp;
+    /**
+     * @dev The function for calculating the ID of the new robot, which is calculated from 8 parts, each of which is
+     * randomly taken from one of the parents. Randomly, one of these parts does not belong to either parent and is
+     * a unique part of the new robot.
+     *
+     * Algorithm use a mask on random number to check if the firstRobotParentId or the secondRobotParentID will be used
+     * For example 205 is 11001101 in binary So 1 is firstRobotParent and 0 is secondRobotParent
+     * firstRobotParent - firstRobotParent - secondRobotParent - secondRobotParent
+     * - firstRobotParent - firstRobotParent - secondRobotParent - firstRobotParent
+     * Than we get a binary bitwise AND operation with i, which is '00000001' for i = 1, '00000010' for i = 2,
+     * '00000100' for i = 4, '00001000' for i = 8, '00010000' for i = 16, '00100000' for i = 32,
+     * '01000000' for i = 64 and '10000000' for i = 128 for uint8 i(8 bits).
+     *
+     * @param firstRobotParentId_ Id of first robot that will be the first 'parent'.
+     * @param secondRobotParentId_ Id of second robot that will be the second 'parent'.
+     */
+    function _newRobotId(uint64 firstRobotParentId_, uint64 secondRobotParentId_)
+        private
+        view
+        returns (uint256 newRobotId_)
+    {
+        uint256 newRobotId;
+        uint64[8] memory idArray;
+        uint64 index = 8;
+        uint256 random;
+        for (uint256 i = 1; i &lt;= 128; i *= 2) {
+            random = uint256(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % 255;
+            index -= 1;
+            if (i == 16) {
+                if (random % 2 != 0) {
+                    idArray[index] = firstRobotParentId_ % 10;
+                } else {
+                    idArray[index] = secondRobotParentId_ % 10;
+                }
+                firstRobotParentId_ /= 10;
+                secondRobotParentId_ /= 10;
+            } else if (random &amp; i != 0) {
+                idArray[index] = firstRobotParentId_ % 100;
+                firstRobotParentId_ /= 100;
+                secondRobotParentId_ /= 100;
+            } else {
+                idArray[index] = secondRobotParentId_ % 100;
+                firstRobotParentId_ /= 100;
+                secondRobotParentId_ /= 100;
+            }
+        }
+        /* Add a random parameter in a random place */
+        uint64 newIdIndex = uint64(random % 8);
+        if (newIdIndex == 3) {
+            idArray[newIdIndex] = uint64(random % 9) + 1;
+        } else {
+            idArray[newIdIndex] = uint64(random % 89) + 11;
+        }
+        /* Id is reversed in the right order */
+        for (uint256 i = 0; i &lt; 8; i++) {
+            newRobotId += idArray[i];
+            if (i != 7) {
+                newRobotId *= 100;
+            }
+            if (i == 2) {
+                newRobotId /= 10;
+            }
+        }
+        return newRobotId;
+    }
+&nbsp;
+    /**
+     * @dev The function for calculating the generation of the new robot, which is calculated from generation
+     * of first and second 'parents'.
+     *
+     * Algorithm check generations of the 'parents'. If the generation of one of the parents is greater than
+     * the generation of the other, then one is added to the generation level of this parent and divided by two.
+     * If the generation level of both parents is the same, then the generation level of the new robot
+     * will be one more than its 'parents'.
+     *
+     * @param firstRobotParentGeneration_ generation of first robot that will be the first 'parent'.
+     * @param secondRobotParentGeneration_ generation of second robot that will be the second 'parent'.
+     */
+    function _newRobotGeneration(uint32 firstRobotParentGeneration_, uint32 secondRobotParentGeneration_)
+        private
+        pure
+        returns (uint32 newRobotGeneration_)
+    {
+        uint32 newRobotGeneration = 0;
+        if (secondRobotParentGeneration_ &lt; firstRobotParentGeneration_) {
+            newRobotGeneration = firstRobotParentGeneration_ + 1;
+            newRobotGeneration /= 2;
+        } else if (secondRobotParentGeneration_ &gt; firstRobotParentGeneration_) {
+            newRobotGeneration = secondRobotParentGeneration_ + 1;
+            newRobotGeneration /= 2;
+        } else {
+            newRobotGeneration = firstRobotParentGeneration_ + 1;
+        }
+        return newRobotGeneration;
+    }
+&nbsp;
+    /**
+     * @dev Function to create a new robot of generation 0. The ID of the new robot is any fifteen-digit number.
+     * There can be a limited number of these tokens, set by the owner of the contract.
+     *
+     * Requirements:
+     *
+     * - `_gen0Counter` must be less than `CREATION_LIMIT_GEN0`.
+     *
+     * @param _id Fifteen-digit ID number of new robot of generation 0.
+     *
+     * Emits a {Build} event.
+     */
+    function createRobotGen0(uint64 _id) external {
+        require(_gen0Counter &lt; CREATION_LIMIT_GEN0, "Gen0 the number of robots has reached its maximum");
+        _gen0Counter++;
+        uint256 tokenId = _createRobot(_id, 0, 0, 0, msg.sender);
+        setOffer(0.2 ether, tokenId);
+    }
+&nbsp;
+    /**
+     * @dev Returns Robot data by providing token Id.
+     */
+    function getRobot(uint64 _id)
+        public
+        view
+        returns (
+            uint64 robotId,
+            uint64 buildTime,
+            uint64 firstRobotParentId,
+            uint64 secondRobotParentId,
+            uint32 generation,
+            uint32 tokenId
+        )
+    {
+        Robot storage robot = _robots[_id];
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(robot.buildTime &gt; 0, "the robot doesn't exist");
+        robotId = robot.robotId;
+        buildTime = uint64(robot.buildTime);
+        firstRobotParentId = uint64(robot.firstRobotParentId);
+        secondRobotParentId = uint64(robot.secondRobotParentId);
+        generation = robot.generation;
+        tokenId = robot.tokenId;
+    }
+&nbsp;
+    /**
+     * @dev Returns created amount of gen 0 robots.
+     */
+    function getCreatedGen0() external view returns (uint256) {
+        return _gen0Counter;
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 25 2022 21:02:11 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
