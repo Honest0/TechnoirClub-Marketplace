@@ -431,3 +431,4 @@ function animationType9() {
     resetAnimation()
     $(".eyes").addClass("movingEyes")
 }
+
