@@ -179,7 +179,7 @@ contract RobotCore is Ownable, RobotMarketPlace {
             uint32 tokenId
         )
     {
-        Robot storage robot = _robots[_id];
+        Robot memory robot = _robots[_id];
         require(robot.buildTime > 0, "the robot doesn't exist");
         robotId = robot.robotId;
         buildTime = uint64(robot.buildTime);
