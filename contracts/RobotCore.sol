@@ -180,7 +180,7 @@ contract RobotCore is Ownable, RobotMarketPlace {
         )
     {
         Robot memory robot = _robots[_id];
-        require(robot.buildTime > 0, "the robot doesn't exist");
+        require(robot.buildTime > 0, "The robot doesn't exist");
         robotId = robot.robotId;
         buildTime = uint64(robot.buildTime);
         firstRobotParentId = uint64(robot.firstRobotParentId);
