@@ -102,3 +102,4 @@ contract RobotFactory is ERC721("TechnoirClub", "NOIR") {
         return _robots.length - 1;
     }
 }
+
