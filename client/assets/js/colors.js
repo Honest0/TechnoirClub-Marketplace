@@ -104,3 +104,4 @@ var colors = {
 function allColors() {
     return colors
 }
+
