@@ -4,3 +4,4 @@ describe("RobotFactory functionality", function () {
     require("./removeOffer")
     require("./setOffer")
 })
+
