@@ -45,3 +45,4 @@ function empty(str) {
     return (!str || 0 === str.length);
 }
 
+
