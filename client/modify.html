@@ -1,0 +1,98 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Technoir Club</title>
+
+        <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="./web3.min.js"></script>
+        <script type="text/javascript" src="./abi.js"></script>
+        <script type="text/javascript" src="./index.js"></script>
+
+        <link rel="stylesheet" href="assets/css/mystyle.css" />
+        <link rel="stylesheet" href="assets/css/colors.css" />
+        <link rel="stylesheet" href="assets/css/frontend.css" />
+        <!-- Robots -->
+        <link rel="stylesheet" href="assets/css/animations.css" />
+        <link rel="stylesheet" href="assets/css/robots.css" />
+    </head>
+
+    <body cz-shortcut-listen="true">
+        <!-- Start menu -->
+        <div id="menu"></div>
+        >
+        <!-- End menu -->
+        <div class="animation-wrapper">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+        </div>
+
+        <div class="container modifyBox" align="center">
+            <h2 class="mb-5">Robots Modifying</h2>
+
+            <div class="row" id="modifyDiv">
+                <div class="col-lg-6">
+                    <p><b>First element</b></p>
+                    <p>This robot will provide the first piece of technology</p>
+                    <div class="featureBox pointer" data-toggle="modal" data-target="#robotSelection">
+                        <div id="First" data-robotid="0" onclick="modifyRobots(this.id)" align="left">
+                            <div align="center">
+                                <div class="scheme"></div>
+
+                                <h4>Select first robot</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="robotIdFirst"></div>
+                </div>
+                <div class="col-lg-6">
+                    <p><b>Second element</b></p>
+                    <p>This robot will provide the second piece of technology</p>
+                    <div class="featureBox pointer" data-toggle="modal" data-target="#robotSelection">
+                        <div id="Second" data-robotid="0" onclick="modifyRobots(this.id)" align="left">
+                            <div align="center">
+                                <div class="scheme"></div>
+
+                                <h4>Select second robot</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="robotIdSecond"></div>
+                </div>
+            </div>
+            <button class="btn red-btn mt-5" id="modify" disabled>Ok, let's build new generation!</button>
+            <div id="message" align="center"></div>
+        </div>
+
+        <!-- Robots modal box -->
+        <div class="modal" id="robotSelection" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">My robots</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Select one of your Robots.</p>
+                        <div class="row" id="robotsDiv"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="assets/js/colors.js"></script>
+    <script src="assets/js/marketplace/buildRobot.js"></script>
+    <script src="assets/js/marketplace/showRobots.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/helpers.js"></script>
+</html>

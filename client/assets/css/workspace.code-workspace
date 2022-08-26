@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../academy-cryptokitties-dev"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "academy-cryptokitties-dev"
+	}
+}

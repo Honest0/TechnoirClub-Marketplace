@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technoir Club</title>
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/robots.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/animations.css">  
+    <link rel="stylesheet" href="assets/css/factory.css">
+    <link rel="stylesheet" href="assets/css/frontend.css">
+</head>
+
+<body id="body">
+    <!-- Start menu -->
+  <div id="menu"></div>
+    <!-- end menu -->
+
+        <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+
+    </div>
+    <div class="cursor"></div>
+    <div class="shadow-cursor"></div>
+    <div class="container p-5" style="margin-top: 12vh;margin-bottom: 10vh;">
+        <div align="center">
+        <h1 class="c-white">Robot-Factory</h1>
+        <p class="c-white">Create your custom Robot</p>
+    </div>
+        <div class="row">
+            <div class="col-lg-4 robotBox m-2 light-b-shadow">
+                <div class="robot" id="newRobot">
+
+                    <div class="head">
+                      <div class="mouth"></div>
+                      <div class="eyes movingEyes">
+                       <span class="eye left_eye">
+                           <aside class="pupils">
+                             <section class="pupils2"></section>
+                           </aside>
+                        </span>
+                       <span class="eye right_eye">
+                           <aside class="pupils">
+                             <section class="pupils3"></section>
+                           </aside>
+                       </span>
+                      </div>
+                    </div>
+    
+                   <div class="body">
+                    <div class="body_decoration">
+                      <div class="chest left_chest">
+                        <div class="nipple"></div>
+                      </div>
+                      <div class="chest right_chest">
+                        <div class="nipple"></div>
+                      </div>
+                    </div>
+                   </div>      
+    
+    
+                   <div class="hands">                        
+                    <div class="tricepses">
+                      <div class="triceps right_triceps"></div>
+                      <div class="triceps left_triceps">
+                        <div class="decor2">
+                          <div class="decor3"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bicepses">
+                      <div class="biceps right_biceps"></div>
+                      <div class="biceps left_biceps"></div>
+                    </div>
+                    <div class="shoulders">
+                      <div class="shoulder right_shoulder"></div>
+                      <div class="shoulder left_shoulder"></div>
+                    </div>
+                    <div class="forearms">
+                      <div class="forearm right_arm">
+                       <div class="decor1"></div>
+                       <div class="fingers">
+                         <div class="finger finger_R"></div>
+                         <div class="finger finger_R"></div>
+                         <div class="finger finger_R"></div>
+                       </div>
+                      </div>
+                      <div class="forearm left_arm">
+                       <div class="fingers">
+                         <div class="finger finger_L"></div>
+                         <div class="finger finger_L"></div>
+                         <div class="finger finger_L"></div>
+                       </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="legs">
+                    <div class="leg right_leg">
+                      <div class="fingers">
+                        <div class="finger finger_leg_R"></div>
+                        <div class="finger finger_leg_R"></div>
+                        <div class="finger finger_leg_R"></div>
+                      </div>
+                    </div>
+                    <div class="leg left_leg">
+                      <div class="fingers">
+                        <div class="finger finger_leg_L"></div>
+                        <div class="finger finger_leg_L"></div>
+                        <div class="finger finger_leg_L"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calfs">
+                    <div class="calf"></div>
+                    <div class="calf"></div>
+                  </div>
+                  <div class="decoration">
+                    <section class="robot_scheme">
+                     <aside class="robot_scheme1">
+                       <span class="robot_scheme2"></span>
+                     </aside>
+                   </section>
+                   </div>
+                 </div>
+                
+                 <br>
+                 <div class="IdBox" id="robotId">
+                     <b>
+                         ROBOT ID:
+                         <!-- Attributes -->
+                         <span id="eyesShape"></span>
+                         <span id="decorationShape"></span>
+                         <span id="element5"></span>
+                         <span id="element6"></span>
+                         <span id="idanimation"></span>
+                         <span id="dnaspecial"></span>
+                         <!-- Colors -->
+                         <span id="element1"></span>
+                         <span id="element2"></span>
+                         <span id="element3"></span>
+                         <span id="element4"></span>
+                     </b>
+                 </div>
+             </div>
+             
+
+ <div class="col-lg-7 attributes m-2 light-b-shadow">
+
+        <div class="btn-group mb-3">
+               <button class="btn btn-primary ml-2 tsp-1" onclick="showAttributes()"><b>Attributes</b></button>
+               <button class="btn btn-primary tsp-1" onclick="showColors()"><b>Colors</b></button>
+        </div>
+
+ <!-- Attributes   -->
+            <div id="robotAttributes" class="hidden">
+                <div class="form-group">
+                    <label for="formControlRange"><b>Eyes Shape</b><span class="badge badge-dark ml-2" id="eyeName"></span></label>
+                    <input type="range" min="1" max="9" class="form-control-range" id="eyeshape">
+                </div>
+
+                <div class="form-group">
+                    <label for="formControlRange"><b>Decoration Shape</b><span class="badge badge-dark ml-2" id="decorationName"></span></label>
+                    <input type="range" min="1" max="9" class="form-control-range" id="decorationshape">
+                </div>
+
+                <div class="form-group">
+                    <label for="formControlRange"><b>Decoration 1 Color</b><span class="badge badge-dark ml-2" id="element5Slider"></span></label>
+                    <input type="range" min="0" max="99" class="form-control-range" id="element5_color">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="formControlRange"><b>Decoration 2 Color</b><span class="badge badge-dark ml-2" id="element6Slider"></span></label>
+                    <input type="range" min="0" max="99" class="form-control-range" id="element6_color">
+                </div>
+
+                <div class="form-group">
+                  <label for="formControlRange"><b>Animation</b><span class="badge badge-dark ml-2" id="AnimationSlider"></span></label>
+                  <input type="range" min="1" max="9" class="form-control-range" id="animations">
+              </div>
+            </div>
+            <!-- Robot colors -->
+          <div id="robotColors">
+            <div class="form-group">
+                <label for="formControlRange"><b>Element 1 Color</b><span class="badge badge-dark ml-2" id="element1Slider"></span></label>
+                <input type="range" min="0" max="99" class="form-control-range" id="element1_color">
+            </div>
+
+            <div class="form-group">
+                <label for="formControlRange"><b>Element 2 Color</b><span class="badge badge-dark ml-2" id="element2Slider"></span></label>
+                <input type="range" min="0" max="99" class="form-control-range" id="element2_color">
+            </div>
+
+            <div class="form-group">
+               <label for="formControlRange"><b>Element 3 Color</b><span class="badge badge-dark ml-2" id="elemen3Slider"></span></label>
+               <input type="range" min="0" max="99" class="form-control-range" id="element3_color">
+            </div>
+
+           <div class="form-group">
+              <label for="formControlRange"><b>Element 4 Color</b><span class="badge badge-dark ml-2" id="element4Slider"></span></label>
+              <input type="range" min="0" max="99" class="form-control-range" id="element4_color">
+           </div>
+         </div>
+          </div>
+        </div>
+            <br>
+            <div class="container">
+            <div class="btn-group">
+                <button class="btn btn-primary tsp-1 m-1 light-b-shadow" onclick="randomRobot()"><b>Get random robot</b></button>
+                <button class="btn btn-primary ml-2 tsp-1 m-1 light-b-shadow" onclick="renderRobot(defaultId)"><b>Default robot</b></button>
+            </div>
+            <div class=" group-btn float-right">
+                <button class="btn btn-success mr-5 tsp-1 m-1 light-b-shadow" onclick="createRobot()"><b>Create robot</b></button>
+            </div>
+            <br>
+
+            <div id="message" align="center"></div>
+              
+            </div>
+        </div>
+            
+        </div>
+    </div>    
+    
+
+
+    <script src="assets/js/colors.js"></script>
+    <script src="assets/js/robotFactory/robotSettings.js"></script>
+    <script src="assets/js/robotFactory/robotFactory.js"></script>
+    <script src="assets/js/helpers.js"></script>
+    <script src="assets/js/components.js"></script>
+
+</body>
+
+</html>
