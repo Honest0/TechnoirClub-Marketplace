@@ -52,3 +52,4 @@ function menu() {
   </nav>`
     $("#menu").html(menu)
 }
+
