@@ -202,3 +202,4 @@ function showAttributes() {
     $("#robotAttributes").removeClass("hidden")
     $("#robotColors").addClass("hidden")
 }
+
