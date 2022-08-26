@@ -518,3 +518,4 @@ function animationType9(id) {
     resetAnimation(id)
     $("#eyes" + id).addClass("movingEyes")
 }
+
