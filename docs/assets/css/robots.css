@@ -1,0 +1,349 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+#body {
+    background: #030303;
+}
+
+.head {
+    background-color: rgb(139, 139, 133);
+    width: 150px;
+    height: 150px;
+    border-radius: 75% 75% 99% 99%;
+    position: relative;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.body {
+    width: 150px;
+    height: 140px;
+    background-color: rgb(139, 139, 133);
+    border-radius: 21% 21% 80% 80%;
+    position: relative;
+    border: 1px solid black;
+    z-index: 0;
+    bottom: 20px;
+}
+
+.body_decoration {
+    position: relative;
+    display: flex;
+}
+
+.chest {
+    background-color: #7c7474;
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    position: relative;
+    margin: 3px;
+    left: 10px;
+    top: 21px;
+    border-radius: 50% 25%;
+}
+
+.left_chest {
+    transform: scale(1, -1) rotate(180deg);
+}
+
+.nipple {
+    width: 5px;
+    height: 5px;
+    position: relative;
+    background-color: #444444;
+    top: 18px;
+    margin: 23px;
+}
+
+.eyes {
+    position: relative;
+    top: 30px;
+    display: flex;
+}
+
+.eye {
+    background-color: rgb(238, 238, 238);
+    border-radius: 50%;
+    width: 38px;
+    height: 53px;
+    margin: 19px;
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.left_eye {
+    transform: scale(1, -1) rotate(180deg);
+}
+
+.right_eye {
+    transform: scale(1, -1) rotate(180deg);
+}
+
+.pupils {
+    background-color: #101111;
+    width: 19px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    top: 9px;
+    left: 7px;
+}
+
+.pupils2 {
+    background-color: #c21e1e;
+    width: 9px;
+    height: 7px;
+    border-radius: 31%;
+    position: relative;
+    top: 12px;
+    left: 1px;
+}
+
+.pupils3 {
+    background-color: #c21e1e;
+    width: 9px;
+    height: 7px;
+    border-radius: 31%;
+    position: relative;
+    top: 12px;
+    left: 1px;
+}
+
+.mouth {
+    width: 11px;
+    height: 7px;
+    background-color: #101111;
+    position: relative;
+    top: 97px;
+    left: 69px;
+    border-radius: 24%;
+}
+
+.hands {
+    position: relative;
+    display: flex;
+    right: 148px;
+    bottom: 262px;
+}
+
+.hand {
+    position: absolute;
+    width: 40px;
+    height: 100px;
+    background-color: rgb(139, 139, 133);
+    border-radius: 50%;
+    margin: 105px;
+    top: -265px;
+    left: -148px;
+    border: 1px solid black;
+}
+
+.left_hand {
+    transform: scale(1, -1) rotate(15deg);
+}
+
+.right_hand {
+    transform: scale(1, -1) rotate(345deg);
+}
+
+.shoulders {
+    position: absolute;
+    display: flex;
+    z-index: 2;
+}
+
+.shoulder {
+    position: relative;
+    width: 58px;
+    height: 50px;
+    background-color: rgb(139, 139, 133);
+    border-radius: 50%;
+    margin: 68px;
+    left: 30px;
+    top: 38px;
+    border: 1px solid black;
+}
+
+.bicepses {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+}
+
+.biceps {
+    position: relative;
+    width: 42px;
+    height: 56px;
+    background-color: rgb(139, 139, 133);
+    border-radius: 50%;
+    margin: 68px;
+    left: 46px;
+    top: 66px;
+    border: 1px solid black;
+}
+
+.tricepses {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+}
+
+.triceps {
+    position: relative;
+    width: 42px;
+    height: 66px;
+    background-color: rgb(139, 139, 133);
+    border-radius: 50%;
+    margin: 88px;
+    left: 7px;
+    top: 40px;
+    border: 1px solid black;
+}
+
+.forearms {
+    position: absolute;
+    display: flex;
+    top: 300px;
+}
+
+.forearm {
+    position: relative;
+    width: 40px;
+    height: 92px;
+    background-color: rgb(139, 139, 133);
+    border-radius: 50%;
+    margin: 66px;
+    top: -206px;
+    left: 51px;
+    border: 1px solid black;
+}
+
+.left_arm {
+    transform: scale(1, -1) rotate(338deg);
+}
+
+.right_arm {
+    transform: scale(1, -1) rotate(22deg);
+}
+
+.fingers {
+    position: relative;
+    display: flex;
+    top: 0px;
+}
+
+.finger {
+    position: relative;
+    width: 9px;
+    height: 23px;
+    background-color: rgb(139, 139, 133);
+    border-radius: 50%;
+    margin: 3px;
+    top: -11px;
+    left: 0px;
+    border: 1px solid black;
+}
+
+.legs {
+    position: relative;
+    display: flex;
+    margin: 0px;
+    bottom: 131px;
+}
+
+.leg {
+    width: 34px;
+    height: 82px;
+    background-color: rgb(139, 139, 133);
+    border-radius: 50%;
+    margin: 16px;
+    top: 75px;
+    left: 9px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.finger_leg_R {
+    top: 63px;
+}
+
+.finger_leg_L {
+    top: 63px;
+}
+
+.robot_scheme {
+    width: 0px;
+    height: 43px;
+    background-color: #101111;
+    border: 1px solid black;
+    position: relative;
+    bottom: 286px;
+    left: 98px;
+    z-index: 1;
+}
+
+.robot_scheme1 {
+    width: 43px;
+    height: 0px;
+    background-color: #101111;
+    border: 1px solid black;
+    position: absolute;
+    left: -2px;
+    z-index: 1;
+    top: 34px;
+}
+
+.robot_scheme2 {
+    width: 0px;
+    height: 72px;
+    background-color: #101111;
+    border: 1px solid black ", " position;
+    position: relative;
+    left: 34px;
+    z-index: 1;
+    border-radius: 0 0 50% 50%;
+}
+
+.decor1 {
+    width: 2px;
+    height: 34px;
+    background-color: #c21e1e;
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    border-radius: 20%;
+    transform: rotate(85deg);
+    z-index: 1;
+}
+
+.decor2 {
+    width: 13px;
+    height: 23px;
+    background-color: #c21e1e;
+    position: relative;
+    top: 23px;
+    left: 22px;
+    border-radius: 22%;
+    transform: rotate(10deg);
+    border: 1px solid black;
+    z-index: 2;
+}
+
+.decor3 {
+    width: 3px;
+    height: 3px;
+    background-color: #101111;
+    left: 3px;
+    top: 3px;
+    position: relative;
+}

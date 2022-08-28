@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technoir Club</title>
+
+
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/frontend.css">
+    <!-- Robots -->
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/robots.css">
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <!-- Start menu -->
+    <div id="menu"></div>>
+    <!-- End menu -->
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+    </div>
+    <div class="robotHeader">
+        
+        <div class="container">
+            <div id="robotSingle">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container middleBox mt-5">
+        <div id="idRobot" align="center"></div>
+        <br>
+        <div class="hidden" align="center" id="buyBox">
+            <div class="btn-group">
+                <button class="btn btn-light btn-lg light-b-shadow" id="buyBtn"><b>Buy me</b></button>
+                <button class="btn btn-light btn-lg ml-2 light-b-shadow" id="priceBtn"></button>
+            </div>
+            <br>
+
+        </div>
+        <div class="hidden row justify-content-center" align="center" id="sellBox">
+
+            <div class="col-lg-2 p-1">
+                <button class="btn btn-warning" id="sellBtn"><b>Sell me</b></button>
+            </div>
+
+            <div class="col-lg-2 p-1 input-group">
+                
+                <input type="number" class="form-control" id="robotPrice" placeholder="Price in ether">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2"><b>ETH</b></span>
+                </div>
+            </div>
+            <div class="col-lg-2 p-1 hidden" id="cancelBox">
+                <button class="btn btn-danger" id="cancelBtn"><b class="t-no-wrap">Cancel offer</b></button>
+            </div>
+            
+        </div>
+        <div id="message" align="center"></div>
+        <br>
+        <div id="attributes"></div>
+
+    </div>
+
+
+
+    </div>
+
+
+</body>
+
+
+<script>
+    // when page load fetch the robot
+    $(document).ready(function () {
+        setTimeout(() => {
+            singleRobot()
+        }, 1000)
+    });
+</script>
+
+<script src="assets/js/colors.js"></script>
+<script src="assets/js/marketplace/buildRobot.js"></script>
+<script src="assets/js/marketplace/showRobots.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/helpers.js"></script>
+
+</html>
+

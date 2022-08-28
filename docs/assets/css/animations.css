@@ -1,0 +1,267 @@
+.movingPupils{
+    animation: movePupils 3s infinite;
+}
+
+@keyframes movePupils {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+        background-color: rgb(192, 27, 27);
+        border: 1px solid black;
+    }
+    50% {
+        transform: scale(1.4);  
+        background-color: rgb(255, 0, 0);
+        border: 1px solid black;
+    }
+    60% {
+        transform: scale(1.2);
+        background-color: rgb(190, 31, 31);
+        border: 1px solid black;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.movingMouth{
+    animation: moveMouth 3s infinite;
+}
+
+@keyframes moveMouth {
+    0% {
+        transform: scale(1);
+    }
+    5% {
+        transform: scale(1.2);
+        border: 1px solid black;
+    }
+    10% {
+        transform: scale(1.4);  
+        border: 1px solid black;
+    }
+    15% {
+        transform: scale(1.2);
+        border: 1px solid black; 
+    }
+    20% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(1);
+    }
+    45% {
+        transform: scale(1.2);
+        border: 1px solid black; 
+    }
+    50% {
+        transform: scale(1.4);  
+        border: 1px solid black;
+    }
+    55% {
+        transform: scale(1.2);
+        border: 1px solid black;
+    }
+    60% {
+        transform: scale(1);   
+    }
+    65% {
+        transform: scale(1);     
+    }
+    70% {
+        transform: scale(1.2);
+        border: 1px solid black;
+    }
+    75% {
+        transform: scale(1.4);  
+        border: 1px solid black;
+    }
+    80% {
+        transform: scale(1.2);
+        border: 1px solid black;
+    }
+    85% {
+        transform: scale(1);   
+    }
+    100% {
+        transform: scale(1);  
+    }
+}
+
+.movingChestR{
+    animation: moveChestR 3s infinite;
+}
+
+@keyframes moveChestR {
+    0% {
+        transform: scale(1);
+        border: 2px solid black;
+    }
+    30% {
+        transform: scale(1.1);
+        border: 2px solid black;
+    }
+    50% {
+        transform: scale(1.1); 
+        border: 3px solid black; 
+    }
+    60% {
+        transform: scale(1.1);
+        border: 2px solid black;
+    }
+    100% {
+        transform: scale(1);
+        border: 2px solid black;
+    }
+}
+
+.movingChestL{
+    animation: moveChestL 3s infinite;
+}
+
+@keyframes moveChestL {
+    0% {
+        transform: scale(1,-1) rotate(180deg);
+        border: 2px solid black;
+    }
+    30% {
+        transform: scale(1.1,-1.1) rotate(180deg);
+        border: 2px solid black;
+    }
+    50% {
+        transform: scale(1.1,-1.1) rotate(180deg);  
+        border: 3px solid black;
+    }
+    60% {
+        transform: scale(1.1,-1.1) rotate(180deg);
+        border: 2px solid black;
+    }
+    100% {
+        transform: scale(1,-1) rotate(180deg);
+        border: 2px solid black;
+    }
+}
+
+.movingShoulders{
+    animation: moveShoulders 10s infinite;
+}
+
+@keyframes moveShoulders {
+    0% {
+        border: 2px solid black;
+    }
+    30% {
+        border: 2px solid black;
+    }
+    50% {
+        transform: scale(1.2);
+        border: 2px solid black;
+    }
+    70% {
+        border: 2px solid black;
+    }
+    100% {
+        border: 2px solid black;
+    }
+}
+
+.movingTriceps{
+    animation: moveTriceps 10s infinite;
+}
+
+@keyframes moveTriceps {
+    0% {
+        border: 2px solid black;
+    }
+    50% {
+        transform: scale(1.2);
+        border: 2px solid black;
+    }
+    100% {
+        border: 2px solid black;
+    }
+}
+
+.movingBiceps{
+    animation: moveBiceps 10s infinite;
+}
+
+@keyframes moveBiceps {
+    0% {
+        border: 2px solid black;
+    }
+    50% {
+        transform: scale(1.2);
+        border: 2px solid black;
+    }
+    100% {
+        border: 2px solid black;
+    }
+}
+
+.movingLegs{
+    animation: moveLegs 10s infinite;
+}
+
+@keyframes moveLegs {
+    0% {
+        border: 2px solid black;
+    }
+    50% {
+        transform: scale(1.1);
+        border: 2px solid black;
+    }
+    100% {
+        border: 2px solid black;
+    }
+}
+
+.movingForeArm_R{
+    animation: moveForearmR 10s infinite;
+}
+
+@keyframes moveForearmR {
+    0% {
+        border: 2px solid black;
+    }
+    50% {
+        transform: scale(1.2,-1.2) rotate(22deg);
+        border: 2px solid black;
+    }
+    100% {
+        border: 2px solid black;
+    }
+}
+
+.movingForeArm_L{
+    animation: moveForearmL 10s infinite;
+}
+
+@keyframes moveForearmL {
+    0% {
+        border: 2px solid black;
+    }
+    50% {
+        transform: scale(1.2,-1.2) rotate(338deg);
+        border: 2px solid black;
+    }
+    100% {
+        border: 2px solid black;
+    }
+}
+
+.movingEyes{
+    animation: moveEyes 10s infinite;
+}
+
+@keyframes moveEyes {
+    0% {
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+    }
+}

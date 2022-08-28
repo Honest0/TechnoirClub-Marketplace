@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technoir Club</title>
+
+
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/frontend.css">
+    <!-- Robots -->
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/robots.css">
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <!-- Start menu -->
+    <div id="menu"></div>>
+    <!-- End menu -->
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+    </div>
+
+
+    <div class="header" align="center">
+
+        <div class="container">
+            <h2 class="menu-title">My Robots</span></h2>
+
+        </div>
+    </div>
+    
+    <div class="container p-3">
+        <button class="btn red-btn mb-3 mt-3" onclick="go_to('modify.html')">Modify </button>
+        <br>
+        <div class="row" id="robotsDiv">
+
+        </div>
+
+    </div>
+
+
+    <script>
+        // when page load create the marketplace
+        $(document).ready(function () {
+            setTimeout(() => {
+                myRobots()
+            }, 1000)
+        });
+    </script>
+
+
+    
+</body>
+
+<script src="assets/js/colors.js"></script>
+<script src="assets/js/marketplace/buildRobot.js"></script>
+<script src="assets/js/marketplace/showRobots.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/helpers.js"></script>
+
+</html>
+
+
