@@ -58,11 +58,9 @@ $ npm install
 ### 3. 🔍  .env environment variables required to set up
 Create .env file inside project folder
 - You can get your ethereum or testnet API key [here](https://infura.io/dashboard/ethereum),[here](https://www.alchemy.com) or any other service that allow you to connect to the nodes
-- You can get your private key from your wallet (Don't share your private key with untrusted parties) 
-- Subscription id can be obtained here after creation of subscription [here](https://vrf.chain.link)
-- Key Hash and address of vrf coordinator can be obtained from here [here](https://docs.chain.link/docs/vrf-contracts) Just choose network and copy:)
+- You can get your private key from your wallet ( ⚠️ Don't share your private key with untrusted parties ⚠️ ) 
 - You can get your etherscan API -key [here](https://etherscan.io/myapikey).
-- LOT_ADDRESS be available after deploying contracts
+- GEN_0_LIMIT specify by yourself
 ```
 GOERLI_API = <GOERLI API key>
 MAINNET_API = <Ethereum mainnet API key>
