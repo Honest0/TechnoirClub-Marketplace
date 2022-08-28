@@ -87,9 +87,6 @@ $ npm run goerli
 $ npm run mainnet 
 ``` 
 
-⚠️ IMPORTANT ⚠️ 
-insert current token contract address into your environment variables
-
 ### 6. ✏️ Insert current contract address and constructor argument you're used while deployment into package.json
 ```
 "goerli:verify": "npx hardhat verify --network goerli --contract contracts/RobotCore.sol:RobotCore [RobotCore.sol address] <Gen 0 limit>",
