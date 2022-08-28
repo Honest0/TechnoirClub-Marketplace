@@ -1,7 +1,3 @@
-
-
-
-
 /* HELPER FUNTIONS  */
 
 function open_window(url) {
