@@ -4,63 +4,109 @@
 > ERC721 collection of Robot-Mutants with integrated  NFT marketplace and modifying features
 > Video explanation [_here_](https://drive.google.com/file/d/1JPvMUQxbuEBp40pdK7pxdyd1Wr5WGBuu/view?usp=sharing). 
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
+## 📁 Table of Contents
+* [General Info](#-general-information)
+* [Technologies Used](#-technologies-used)
+* [Features](#-features)
+* [Screenshots](#-screenshots)
+* [Requirements For Initial Setup](#-requirements-for-initial-setup)
+* [Setup](#-setup)
+* [Room for Improvement](#-room-for-improvement)
+* [Contact](#-contact)
 
-
-## General Information
+## 🚩 General Information
 - Users can mint their unique robots 
 - Users can modify and create new robots from parts of 2 another robots 
-- Users can buy / sell robots from another users from integrated marketplace
+- Users can buy / sell robots from other users from integrated marketplace
 
 
-## Technologies Used
-- truffle - version 5.5.15
+## 💻 Technologies Used
+- hardhat - version 2.10.1
 - node - version 16.15.0
 - HTML, CSS and ES6 JS
+- hh coverage
+- slither
+- solhint
+- docgen
 
 
-## Features
+## 🌟 Features
 List the ready features here:
 - Awesome Frontend
 - Trillions of different robots combination. Every robot is totally unique!
-- Modyfying feature. User can create new generation robot from two another robots
+- Modyfying feature. User can create new generation robot from two another robots!
+- Build-in marketplace
 
 
-## Screenshots
+## 🎦 Screenshots
 ![Example screenshot](./helpers/READMEpng/Screenshot.png)
 ![Example screenshot](./helpers/READMEpng/Screenshot1.png)
 ![Example screenshot](./helpers/READMEpng/Screenshot3.png)
 
-
-## Setup
-Download repository and after that open terminal and run "npm install" in order to download all dependencies.
-```
- npm install
-```
-After that you need to run your local blockchain. Open Ganache and in terminal run command:
-```
- truffle migrate --reset:
-```
-After that let's run your local server with project frontend:
-```
- npm run start
-```
-And at the end page will ask you to connect to your Metamask wallet. After you connected the setup is done!
+## 👀 Requirements For Initial Setup
+- Install [NodeJS](https://nodejs.org/en/), should work with any node version below 16.16.0
+- Install [Hardhat](https://hardhat.org/)
 
 
-## Project Status
-Project is: _in progress_ 
+## 📟 Setup
+### 1. 💾 Clone/Download the Repository
+### 2. 📦 Install Dependencies:
+```
+$ cd lottery_file
+$ npm install
+```
+### 3. 🔍  .env environment variables required to set up
+Create .env file inside project folder
+- You can get your ethereum or testnet API key [here](https://infura.io/dashboard/ethereum),[here](https://www.alchemy.com) or any other service that allow you to connect to the nodes
+- You can get your private key from your wallet (Don't share your private key with untrusted parties) 
+- Subscription id can be obtained here after creation of subscription [here](https://vrf.chain.link)
+- Key Hash and address of vrf coordinator can be obtained from here [here](https://docs.chain.link/docs/vrf-contracts) Just choose network and copy:)
+- You can get your etherscan API -key [here](https://etherscan.io/myapikey).
+- LOT_ADDRESS be available after deploying contracts
+```
+GOERLI_API = <GOERLI API key>
+MAINNET_API = <Ethereum mainnet API key>
+PRIVATE_KEY = <Private key of your wallet u want to deploy contracts from>
+ETHERSCAN_KEY = <Etherscan API key in order to verify your contracts>
+GEN_0_LIMIT = <Limit of gen 0 robots to be created>
+```
+![Example screenshot](./helpers/Screenshot8.png)
 
-## Room for Improvement
+### 4. ⚠️ Run Tests
+```
+$ npm run test
+```
+
+```
+$ npm run coverage
+```
+
+### 5. 🚀 Deploy to Goerli or Mainnet
+(🧐 Remember to have ether in your wallet to deploy contracts 🙄)
+```
+$ npm run goerli
+``` 
+```
+$ npm run mainnet 
+``` 
+
+!!!Important!!! 
+insert current token contract address into your environment variables
+
+### 6. ✏️ Insert current contract addresses into package.json
+![Example screenshot](./helpers/Screenshot7.png)
+
+### 7. 📜 Verify contracts
+```
+$ npm run goerli:verify 
+```
+or for mainnet
+```
+$ npm run mainnet:verify
+```
+
+
+## 📈 Room for Improvement
 
 Room for improvement:
 - Go live Ethereum network
@@ -68,5 +114,5 @@ Room for improvement:
 - Go OpenSea and other NFT marketplaces
 
 
-## Contact
+## 💬 Contact
 Created by [@LESKOV](https://www.linkedin.com/in/ivan-lieskov-4b5664189/) - feel free to contact me!
