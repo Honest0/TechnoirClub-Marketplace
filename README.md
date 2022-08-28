@@ -57,6 +57,7 @@ $ npm install
 ```
 ### 3. 🔍  .env environment variables required to set up
 Create .env file inside project folder
+- You can get your ethereum or testnet API key <a href="https://infura.io/dashboard/ethereum" target="_blank">Hello, world!</a>[here](https://infura.io/dashboard/ethereum),[here](https://www.alchemy.com) or any other service that allow you to connect to the nodes
 - You can get your ethereum or testnet API key [here](https://infura.io/dashboard/ethereum),[here](https://www.alchemy.com) or any other service that allow you to connect to the nodes
 - You can get your private key from your wallet ( ⚠️ Don't share your private key with untrusted parties ⚠️ ) 
 - You can get your etherscan API -key [here](https://etherscan.io/myapikey).
@@ -68,7 +69,6 @@ PRIVATE_KEY = <Private key of your wallet u want to deploy contracts from>
 ETHERSCAN_KEY = <Etherscan API key in order to verify your contracts>
 GEN_0_LIMIT = <Limit of gen 0 robots to be created>
 ```
-![Example screenshot](./helpers/Screenshot8.png)
 
 ### 4. ⚠️ Run Tests
 ```
