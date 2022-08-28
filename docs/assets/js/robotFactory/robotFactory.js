@@ -432,3 +432,4 @@ function animationType9() {
     $(".eyes").addClass("movingEyes")
 }
 
+
