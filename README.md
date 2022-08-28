@@ -52,7 +52,7 @@ List the ready features here:
 ### 1. 💾 Clone/Download the Repository
 ### 2. 📦 Install Dependencies:
 ```
-$ cd lottery_file
+$ cd technoir_directory
 $ npm install
 ```
 ### 3. 🔍  .env environment variables required to set up
