@@ -28,7 +28,7 @@ Try already deployed contract and frontend [here](https://ileskov.github.io/Tech
 
 It's required to use a Goerli test network in order to interact with this page, if you do not know how to do this, follow the instructions below
 
-## 🌐 Set up Goeli test network
+## 🌐 Set Up Goeli Test Network
 ### 1. 💾 Download Metamask Wallet Extension
 If you don't know to to do this just follow [this](https://www.cryptonary.com/cryptoschool/tutorial-how-to-download-set-up-use-metamask/) guide (Only install and save your backup phrase)
 ### 2. 😎 In Metamask advanced settings make sure u have "Show test networks" button ON
