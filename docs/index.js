@@ -221,3 +221,4 @@ async function totalRobots() {
     var robots = await instance.methods.totalSupply().call()
 }
 
+
