@@ -4,7 +4,7 @@
     "description": "ERC721 collection of Robot-Mutants with integrated NFT marketplace and modifying features",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "npx hardhat test",
         "goerli": "npx hardhat run --network goerli scripts/deploy.js",
         "mainnet ": "npx hardhat run --network ethereum scripts/deploy.js",
         "goerli-verify": "npx hardhat verify --network goerli --contract contracts/RobotCore.sol:RobotCore [RobotCore.sol address] '40'",
