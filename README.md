@@ -87,7 +87,7 @@ $ npm run goerli
 $ npm run mainnet 
 ``` 
 
-!!!Important!!! 
+⚠️ IMPORTANT ⚠️ 
 insert current token contract address into your environment variables
 
 ### 6. ✏️ Insert current contract addresses into package.json
