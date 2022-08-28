@@ -7,7 +7,7 @@
 ## 📁 Table of Contents
 * [General Info](#-general-information)
 * [Test Already Deployed Contract And Frontend](#-test-already-deployed-contract-and-frontend)
-* [Set up a Goeli test network](#-set-up-goerli-test-network)
+* [Set up a Goeli test network](#-set-up-a-goerli-test-network)
 * [Technologies Used](#-technologies-used)
 * [Features](#-features)
 * [Screenshots](#-screenshots)
