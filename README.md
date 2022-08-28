@@ -32,14 +32,14 @@ It's required to use a Goerli test network in order to interact with this page, 
 ### 1. 💾 Download Metamask Wallet Extension
 If you don't know to to do this just follow [this](https://www.cryptonary.com/cryptoschool/tutorial-how-to-download-set-up-use-metamask/) guide (Only install and save your backup phrase)
 ### 2. 😎 In Metamask advanced settings make sure u have "Show test networks" button ON
-![Example screenshot](./helpers/READMEpng/Screenshot4.png)
+//![Example screenshot](./helpers/READMEpng/Screenshot4.png)
 ### 3. 🛰️ Now switch your network to Goerli TestNet
-![Example screenshot](./helpers/READMEpng/Screenshot5.png)
+//![Example screenshot](./helpers/READMEpng/Screenshot5.png)
 ### 4. 🚰 Now you need to get some test ETH from Goerli faucet
 You can use [this](https://goerli-faucet.pk910.de/) or choose any other given on [this](https://forum.openzeppelin.com/t/goerli-testnet-faucets/26710) forum
 
 
-![Example screenshot](./helpers/READMEpng/Screenshot8.png)
+//![Example screenshot](./helpers/READMEpng/Screenshot8.png)
 
 
 
