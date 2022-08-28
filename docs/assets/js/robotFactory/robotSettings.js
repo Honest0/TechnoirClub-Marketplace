@@ -203,3 +203,4 @@ function showAttributes() {
     $("#robotColors").addClass("hidden")
 }
 
+
