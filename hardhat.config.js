@@ -35,7 +35,7 @@ module.exports = {
         ethereum: {
             chainId: 1,
             url: process.env.MAINNET_API,
-            accounts: process.env.PRIVATE_KEY},
+            accounts: process.env.PRIVATE_KEY,
         },
     },
     etherscan: {
