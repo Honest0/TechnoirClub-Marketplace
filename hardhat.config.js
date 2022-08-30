@@ -29,16 +29,16 @@ module.exports = {
             initialBaseFeePerGas: 0,
         },
         goerli: {
-            url: `${process.env.GOERLI_API}`,
-            accounts: [`${process.env.PRIVATE_KEY}`],
+            url: process.env.GOERLI_API,
+            accounts: process.env.PRIVATE_KEY,
         },
         ethereum: {
             chainId: 1,
-            url: `${process.env.MAINNET_API}`,
-            accounts: [`${process.env.PRIVATE_KEY}`],
+            url: process.env.MAINNET_API,
+            accounts: process.env.PRIVATE_KEY},
         },
     },
     etherscan: {
-        apiKey: `${process.env.ETHERSCAN_KEY}`,
+        apiKey: process.env.ETHERSCAN_KEY,
     },
 }
