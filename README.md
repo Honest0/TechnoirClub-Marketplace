@@ -22,7 +22,7 @@
 - Users can buy / sell robots from other users from integrated marketplace
 
 ## 🧪 Test Already Deployed Contract And Frontend
-Try already deployed contract and frontend [here](https://ileskov.github.io/TechnoirClub/index.html)
+Try already deployed contract and frontend [here](https://ileskov.github.io/TechnoirClub-Marketplace/index.html)
 
 ⚠️ IMPORTANT ⚠️ 
 
